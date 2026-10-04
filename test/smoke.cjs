@@ -20,6 +20,9 @@ const ok = (cond, msg) => { console.log((cond ? '  OK ' : ' FAIL') + ' ' + msg);
 
   // 1. render inicial
   ok(d.querySelectorAll('.kpi').length === 4, 'devtools: 4 KPIs');
+  const navLinks = [...d.querySelectorAll('.nav a')].map(a => a.textContent.trim());
+  ok(navLinks.length === 3 && navLinks.includes('Hacer pedido') && navLinks.includes('Panel del negocio') && navLinks.includes('DevTools'),
+    'sidebar: hub con enlaces a las 3 apps');
   ok(d.querySelectorAll('#st-productos .hbar').length === 5, 'stats: 5 barras de ventas por producto');
   ok(!!d.querySelector('#st-estados .donut'), 'stats: dona de pedidos por estado');
   ok(d.querySelectorAll('#st-estados .legend .li').length === 2, 'stats: leyenda con 2 estados de ejemplo');

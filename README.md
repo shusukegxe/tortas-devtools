@@ -7,7 +7,9 @@ tienda y el panel: si entra un pedido en otra pestaña, las gráficas se mueven.
 **Demo en vivo:** https://shusukegxe.github.io/tortas-devtools/
 
 Las tres aplicaciones del sistema (repos separados, mismo Store compartido vía
-`localStorage` + `BroadcastChannel` en `shusukegxe.github.io`):
+`localStorage` + `BroadcastChannel` en `shusukegxe.github.io`). Esta es la única
+de las tres páginas con navegación entre ellas — la tienda y el panel son
+autocontenidos, sin enlaces a las otras apps:
 
 | Página | Repo | Qué hace |
 |---|---|---|
